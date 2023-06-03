@@ -9,7 +9,11 @@ function App() {
         <li><a href="#">Profile</a></li>
         </ul>
         </header>
-      <body></body>
+      <body>
+        <section>
+        <img className="logo" src= "logo.png"></img>
+        </section>
+      </body>
     </div>
     
   );
