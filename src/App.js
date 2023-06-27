@@ -1,4 +1,14 @@
+import React, { useState } from 'react';
 function App() {
+  const [inputValue, setInputValue] = useState('');
+
+  const handleClick = () => {
+    const inp_str = inputValue;
+    alert(`hello there: ${inp_str}`);
+  }
+  const handleInputChange = (event) =>{
+    setInputValue(event.target.value);
+  }
   return (
     <div className="App">
       <header className = "navbar">
@@ -24,8 +34,8 @@ function App() {
           </div>
         </section>
         <div className="textdiv">
-          <input type="text" className="textbox"></input>
-          <button className="btn btn-primary button-30">Build</button>
+          <input type="text" className="textbox" onChange= {handleInputChange} value = {inputValue}></input>
+          <button className="btn btn-primary button-30" onClick={handleClick}>Build</button>
         </div>
       </body>
     </div>
